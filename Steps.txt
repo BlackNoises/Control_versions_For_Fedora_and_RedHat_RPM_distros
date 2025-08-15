@@ -1,0 +1,22 @@
+For Fedora and Red Hat RPM distros:
+
+1. Current kernel
+
+uname -r
+
+2. List installed kernels and modules 
+
+rpm -qa | grep -i kernel 
+
+3. To remove previous kernels (I only tried 1x1)
+
+sudo dnd remove “version name”
+
+4. Update grub 
+
+Bios
+sudo grub2-mkconfig -o /boot/grub2/grub.cfg
+
+Uefi
+
+sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg
